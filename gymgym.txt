@@ -1,0 +1,901 @@
+健身房账号密码：
+alphafit_2016@163.com 
+A1ph@f1t
+商户平台登录帐号
+1330579601@1330579601
+商户平台登录密码
+333996
+appId:wxc4c9a459f7b4beef
+AppSecret:84c8531c09758c59a38ecd9f6955c440
+域名:www.alpha-fit.cn	
+
+ui
+微信头像
+微信会员图标，包括不同等级
+到场完成标签
+
+
+string转json对象
+String userInfo = getUserInfo(wechatRequest);
+JSONObject jsonObject = JSONObject.parseObject(userInfo);
+String nickname =jsonObject.getString("nickname");
+
+
+
+mac npm 安装使用sudo，不然会报没有权限
+
+
+
+222000－596-50-70
+
+<link href=".." rel="stylesheet">
+
+
+
+gym.hlingsoft.com/gym/wechat/dist/css/weui.css
+
+
+问·我的管家
+健康管家
+	我的管家
+	   （会员身份）
+		管家信息
+		更换管家
+		问答
+		评分
+		(非会员)
+		提示成为会员分配管家
+	管家列表
+			
+
+各类锻炼资料；
+	列出锻炼的各种资料
+微社区
+ 
+约·锻炼比赛：
+课程购买
+	微商城
+场馆预约
+
+
+
+
+exerciseMaterial
+
+companyIntroduction
+ appointenue
+
+比赛平台（参加比赛是否需要会员）
+	我的比赛
+	我要参赛
+
+AlphaFit：
+公司简介
+文化及理念
+服务体系
+Rowing历史
+员工入口（管家）
+	(没有绑定的微信号）
+	成为教练
+	成为管家
+
+	(管家登录)
+	我的会员
+	个人资料
+	问答
+
+	(教练登录)
+	我的课程
+	个人资料
+
+//0.关注但未注册;1.关注且注册为会员;2.关注且注册为管家;3.关注且为教练
+
+GroupId  0.普通身份  1.会员 2.管家 3.教练
+
+
+<a href="/wechat/manager/register.do" class="weui_btn weui_btn_primary">成为管家</a>
+
+http://localhost:8070/wechat/manager/register.do
+ 
+员工登录
+http://localhost:8070/wechat/staff/login.do
+
+
+
+
+ <#if e.status!=9>
+
+                                        <a href="${BASE_PATH}/manage/order/check.htm?orderId=${e.id}" title="审核订单" class="btn btn-default blue">
+                                            审核订单
+                                        </a>
+                                        <#else >
+                                        查看
+                                    </#if>	
+
+
+http://gym.hlingsoft.com/gym/wechat/menu/create.do
+
+
+
+
+
+
+
+
+2.菜单说明
+	
+
+
+	问•管家－健康管家   
+	 	关注用户     点击进入会员绑定进行绑定，绑定后进入健康管家主页面，主页面包括“我的管家”和“管家列表”。
+	    会员用户     点击直接进入主页面，主页面包括“我的管家”和“管家列表”
+	    教练，管家   进入主页面，主页面只含有在线的管家列表。
+	问•管家－锻炼资料
+	    所有用户     跳转到主页，具体内容贵公司提供？
+	问•管家－微社区
+		所有用户     点击跳转到微社区的url
+	约•锻炼－课程购买 
+		非会员能否购买？若不能如何处理，在支付时跳转到注册页面？
+	约•锻炼－场馆预约 
+		是否所有用户都能预约场馆？
+	约•锻炼－比赛平台 
+		是否所有用户都能参加比赛？
+	alhpafit-公司简介
+		所有用户     跳转到主页，具体内容贵公司提供？
+	alhpafit-文化理念
+		所有用户     跳转到主页，具体内容贵公司提供？
+	alhpafit-服务体系
+		所有用户     跳转到主页，具体内容贵公司提供？
+	alhpafit-Rowing历史
+		关注用户     显示会员才有历史？
+		会员         显示历史
+		教练，管家    显示如何显示
+	alhpafit-员工入口
+	    管家，教练是否是内置的账号，普通用户和会员能申请成为管家教练吗？
+	    申请管家和教练需要哪些资质；
+
+
+
+
+
+本周开发进度如下：6月20- 6月24
+1.网站域名申请(未备案)
+2.会员注册
+3.教练，管家申请
+4.自定义菜单重构
+5.菜单页面绘制。根据不同的身份跳转到不同的页面
+6.token中间器，把token保存到数据库，每两小时刷新一次，防止token失效导致网站不能访问
+
+下周开发计划：
+1.消息主动发送，推送消息到特定用户，特定组
+2.在完成1的前提下实现会员问答；
+3.社区申请
+3.部分页面ui优化（非主要工作内容，优先确保功能）
+
+以下是本周开发过程中遇到的问题：
+
+1.网站备案
+
+
+
+
+2.菜单说明
+	问•管家－健康管家   
+	 	关注用户     点击进入会员绑定进行绑定，绑定后进入健康管家主页面，主页面包括“我的管家”和“管家列表”。
+	    会员用户     点击直接进入主页面，主页面包括“我的管家”和“管家列表”
+	    教练，管家   进入主页面，主页面只含有在线的管家列表。
+	问•管家－锻炼资料
+	     必须是绑定过服务号的会员才可以进入、打开？
+	问•管家－微社区
+		所有用户     点击跳转到微社区的url
+	问•管家－个人档案
+		会员显示自己的个人档案，个人档案由管家在我大管家中添加
+	问•健康指数
+		会员的健康体测
+
+
+
+	约•锻炼－课程购买 
+		非会员能否购买？若不能如何处理，在支付时跳转到注册页面？
+	约•锻炼－场馆预约 
+		是否所有用户都能预约场馆？
+	约•锻炼－比赛平台 
+		是否所有用户都能参加比赛？
+	alhpafit-公司简介
+		所有用户     跳转到主页，具体内容贵公司提供？
+	alhpafit-文化理念
+		所有用户     跳转到主页，具体内容贵公司提供？
+	alhpafit-服务体系
+		所有用户     跳转到主页，具体内容贵公司提供？
+	alhpafit-Rowing历史
+		关注用户     显示会员才有历史？
+		会员         显示历史
+		教练，管家    显示如何显示
+	alhpafit-员工入口
+	    管家，教练是否是内置的账号，普通用户和会员能申请成为管家教练吗？
+	    申请管家和教练需要哪些资质；
+ 
+
+
+
+
+o4VUow1u70srOEhOZEKFph9fQWO8
+o4VUowyszJd5bh5WKHO-F7oY95i0
+o4VUowwdbZYZNRvQKgrdC20xkfgk
+o4VUow17EWFK01cQoTSDexJ3Cj1c
+
+
+
+
+问•管家
+	健康管家  
+	锻炼资料
+	微社区
+	个人档案
+	健康指数
+约•锻炼
+	场馆预约
+	比赛平台
+	会员同行
+	我的锻炼
+	我要评分
+alhpafit
+	公司简介
+	文化理念
+	服务体系
+	员工入口
+
+
+https://api.weixin.qq.com/cgi-bin/material/add_news?access_token=ACCESS_TOKEN
+
+
+
+
+ <link href="/css/ocean_blue.css" rel="stylesheet">
+    <link href="/css/report.css" rel="stylesheet">
+    <link href="/css/swiper.min.css" rel="stylesheet">
+
+
+
+
+<div class="box">
+    <div class="bd spacing" style="width: 300px">
+        <a href="${basePath}/wechat/user/member/ask.do" class="weui_btn weui_btn_primary">我要提问</a>
+        <a href="${basePath}/wechat/user/member/changeManager.do" class="weui_btn weui_btn_primary">更换管家</a>
+        <a href="${basePath}/wechat/user/manager/members.do" class="weui_btn weui_btn_primary">我要评分</a>
+    </div>
+</div>
+
+
+lemonfit
+
+
+几个消息通知
+1.管家替换一个消息
+2.支付成功
+3.比赛预约
+4.比赛开始通知
+
+
+
+
+未处理消息提醒
+
+
+
+
+
+
+{{first.DATA}}
+客户姓名：{{keyword1.DATA}}
+量尺时间：{{keyword2.DATA}}
+{{remark.DATA}}
+
+
+内容示例
+你有一个量尺提醒，信息如下：
+客户姓名：李先生
+量尺时间：2015-08-01 13:30
+亲，明天有客户需要量尺，别忘了提前联系客户哦~
+
+
+
+更换管家，给的消息通知
+
+
+
+wechat/user/member/registerInfo.do
+
+
+1.解决ios无法返回问题
+在图文页面链接的最后加上 #wechat_redirect 可以解决这个问题。
+如果已经有 #XX，换成 #wechat_redirect 即可。
+
+
+
+{
+"goods_detail":[
+{
+"goods_id":"iphone6s_16G",
+"wxpay_goods_id":"1001",
+"goods_name":"iPhone6s 16G",
+"goods_num":1,
+"price":528800,
+"goods_category":"123456",
+"body":"苹果手机"
+},
+{
+"goods_id":"iphone6s_32G",
+"wxpay_goods_id":"1002",
+"goods_name":"iPhone6s 32G",
+"quantity":1,
+"price":608800,
+"goods_category":"123789",
+"body":"苹果手机"
+}
+]
+}
+
+
+<xml><return_code><![CDATA[SUCCESS]]></return_code>
+<return_msg><![CDATA[OK]]></return_msg>
+<appid><![CDATA[wxc4c9a459f7b4beef]]></appid>
+<mch_id><![CDATA[1330579601]]></mch_id>
+<device_info><![CDATA[WEB]]></device_info>
+<nonce_str><![CDATA[PuRW7AjvMjtIddDc]]></nonce_str>
+<sign><![CDATA[2D99F11EF4FCE5EE4D0A0E9F5C051DE3]]></sign>
+<result_code><![CDATA[SUCCESS]]></result_code>
+<prepay_id><![CDATA[wx20160711160352e0d66addf60406741334]]></prepay_id>
+<trade_type><![CDATA[JSAPI]]></trade_type>
+</xml>
+
+9FF7B7A1596ACDA6863CAA450E79A225
+
+9262DFAACEF6B5BB6B144F491658CB1E
+
+
+http://gym.hlingsoft.com/wechat/pay/shoppingCentre.do
+
+
+
+org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"count",out_trade_no,total_fee,time_start,openid)
+        value(1,1,'16071312320' at line 1
+### The error may involve com.hlingsoft.gym.dao.PeriodOrderDao.add-Inline
+### The error occurred while setting parameters
+### SQL: insert into periodOrder(periodId,"count",out_trade_no,total_fee,time_start,openid)         value(?,?,?,?,?,?)
+### Cause: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"count",out_trade_no,total_fee,time_start,openid)
+        value(1,1,'16071312320' at line 1
+; bad SQL grammar []; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '"count",out_trade_no,total_fee,time_start,openid)
+        value(1,1,'16071312320' at line 1
+
+
+
+
+
+http://localhost:8070/wechat/pay/goodsDetail.do?id=2
+
+
+${course.endTime?string("MM-dd HH:mm")}
+
+
+http://wx.qlogo.cn/mmopen/lLt5fYPek6OYZettmCiaEFM4JQtk5SSQdjHgb9gWCjxlIzToVx14y7hm3WEdUBtuSQqGzIgEgh9RUK2wqaHgnNZWp6iat7gl57/0
+
+
+
+
+万总，您好：
+
+本周开发进度如下：7月4-7月8
+	1.再次面议，确认功能实现细节；
+	2.修改会员注册逻辑，ui
+	3.实现问答推送；
+	4.社区申请接入；
+	5.数据库重构。
+	 
+	下周开发计划：
+	1.课程购买；
+	2.课程，比赛预约，取消功能
+	3.对照本周提供的参照公众账号优化ui
+	4.接入短信通道
+
+疑问：
+	1.会员注册已经按逻辑完成，测试反馈问题,周末改下
+	1.提供下会员卡的ui展示
+	2.罗列下涉及的消息推送说明下展现形式？部分可能需要申请模版
+
+
+
+	约•锻炼－课时购买
+alhpafit－α商城
+约•锻炼－课程预约
+约•锻炼－比赛平台
+
+AlphaCoin
+
+介绍会员
+
+问•我管家－我的档案
+约•锻炼－邀请好友  
+约•锻炼－锻炼捐赠
+
+
+
+http://weixin.qq.com/q/iThAA5PlGK9hn3cBPhQl
+http://weixin.qq.com/q/iThAA5PlGK9hn3cBPhQl
+
+
+https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQG28DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2lUaEFBNVBsR0s5aG4zY0JQaFFsAAIE9HaQVwMEAAAAAA==
+https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQG28DoAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL2lUaEFBNVBsR0s5aG4zY0JQaFFsAAIE9HaQVwMEAAAAAA==
+https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQG88ToAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL25EaGQyVi1sYzY4S21HYXRJeEFsAAIEs4WQVwMEAAAAAA==
+https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQG98ToAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL3FqZ2JYNXpsUDY5RzcxUWhaUlFsAAIEtI6QVwMEAAAAAA==
+https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=gQG98ToAAAAAAAAAASxodHRwOi8vd2VpeGluLnFxLmNvbS9xL3FqZ2JYNXpsUDY5RzcxUWhaUlFsAAIEtI6QVwMEAAAAAA==
+
+
+
+http://busi.supermonkey.com.cn/weixin3/act/invite.html?key=bb7bf2894b65040e91acd85908e82ebe&userId=80589
+
+
+
+0e9ad98ab0b62e25432e4032963222fbb3cce48c
+
+
+
+
+
+6864cf0f112913573fc720b6409c8d7910efe95c
+
+
+
+wxc4c9a459f7b4beef
+https://open.weixin.qq.com/connect/oauth2/authorize?appid=wxc4c9a459f7b4beef&redirect_uri=http%3A%2F%2Fgym.hlingsoft.com%2Fgym%2Fwechat%2Fexercise%2Finvite.do&response_type=code&scope=snsapi_base&state=state
+kgt8ON7yVITDhtdwci0qeQ115fMgLinYL6zBDolPbxXM9W0eI8xfV24YF72awyUzyGjvejEPMPa78eGLDHNnyA
+j03mceaa3yd259tcddqee2pntdgxwnrt
+1469117080
+dec6ce3b7200fb5308dcfcbe15fe35d5da591f5b
+
+
+ <li>
+                        <label>课程介绍：</label>
+                        <span>${course.des!}</span>
+                    </li>
+
+
+select * from 表 where date_format(日期,'%Y-%m-%d')='2014-04-01' 日期
+
+
+
+
+member/askRecord.do
+
+
+style="background-color: #21394D;color: #56B0B9"
+18061878688
+
+
+86 176 185
+
+
+
+   Member m = (Member) request.getSession().getAttribute("user");
+        Member member = null;
+//        if (m != null) {
+//            member = memberDao.findById(m.getId());
+//        } else {
+//            String code = request.getParameter("code");
+//            GetAccessTokenRequest getAccessTokenRequest = new GetAccessTokenRequest(code);
+//            GetAccessTokenResponse getAccessTokenResponse = null;
+//            getAccessTokenResponse = OAuthManager.getAccessToken(getAccessTokenRequest);
+//            String openid = getAccessTokenResponse.getOpenid();
+//            member = memberDao.findByOpenId(openid);
+//        }
+        member=memberDao.findById(24);
+
+
+
+
+
+<color name="firefly">#0E2334</color>
+
+
+
+return "user/subscribe";
+
+
+url(http://img.supermonkey.com.cn/webapp/wx2/ticket/envelope.png)
+
+
+
+RGBA(18, 43, 61, 1.00)
+
+HSL(205, 54%, 15%)
+
+String code = request.getParameter("code");
+            GetAccessTokenRequest getAccessTokenRequest = new GetAccessTokenRequest(code);
+            GetAccessTokenResponse getAccessTokenResponse = null;
+            try {
+                getAccessTokenResponse = OAuthManager.getAccessToken(getAccessTokenRequest);
+                String openid = getAccessTokenResponse.getOpenid();
+                member = memberDao.findByOpenId(openid);
+            } catch (OAuthException e) {
+                modelMap.put("errormsg","微信授权错误");
+                return "error/showerror";
+            }
+
+
+#70DBDB
+
+
+2亲，您平时最爱吃的食物，（吃得最多的食物是以下哪类食物）（主观评判自己的饮食风格）
+A 没办法，四川人，火锅英雄（主要是以火锅或者油炸的东西）
+B 西方的甜点，看到就走不动了，芝士，抹茶……不行了（甜点，甜品，饮料类）
+C北方汉子，不吃粮食感觉没吃（主要以细粮米面为主体食物）
+D，特别喜欢刺身，日料，一顿没有肉饭吃不下（肉类海鲜为主）。 
+E 清秀之人，茶斋素食（蔬菜水果清淡为主。）
+
+
+
+
+深色  #0E2334
+浅色	  ＃#152C3F
+
+
+http://www.styd.cn/m/undefined/default/calendar 
+
+
+<li><a href="javascript:void(0);" data="2016-08-10"    name="date_select"  >10  </a></li>
+<li><a href="javascript:void(0);" data="2016-08-10"                          name=\"date_select\"\n            >10        </a></li>\n    <li>
+
+
+
+<li>一</li>
+<li>二</li>
+<li>三</li>
+<li>四</li>
+<li>五</li>
+<li>六</li>
+<li>日</li>
+<li><a href="javascript:void(0);" data="2016-08-29"
+                            name="date_select"
+>29</a></li>
+<li><a href="javascript:void(0);" data="2016-08-30"
+                            name="date_select"
+>30</a></li>
+<li><a href="javascript:void(0);" data="2016-08-31"
+                            name="date_select"
+>31</a></li>
+<li><a href="javascript:void(0);" data="2016-09-01"
+                            name="date_select"
+>1</a></li>
+<li><a href="javascript:void(0);" data="2016-09-02"
+                            name="date_select"
+>2</a></li>
+<li><a href="javascript:void(0);" data="2016-09-03"
+                            name="date_select"
+>3</a></li>
+<li><a href="javascript:void(0);" data="2016-09-04"
+                            name="date_select"
+>4</a></li>
+<li><a href="javascript:void(0);" data="2016-09-05"
+                            name="date_select"
+>5</a></li>
+<li><a href="javascript:void(0);" data="2016-09-06"
+                            name="date_select"
+>6</a></li>
+<li><a href="javascript:void(0);" data="2016-09-07"
+                            name="date_select"
+>7</a></li>
+<li><a href="javascript:void(0);" data="2016-09-08"
+                            name="date_select"
+>8</a></li>
+<li><a href="javascript:void(0);" data="2016-09-09"
+                            name="date_select"
+>9</a></li>
+<li><a href="javascript:void(0);" data="2016-09-10"
+                            name="date_select"
+>10</a></li>
+<li><a href="javascript:void(0);" data="2016-09-11"
+                            name="date_select"
+>11</a></li>
+<li><a href="javascript:void(0);" data="2016-09-12"
+                            name="date_select"
+>12</a></li>
+<li><a href="javascript:void(0);" data="2016-09-13"
+                            name="date_select"
+>13</a></li>
+<li><a href="javascript:void(0);" data="2016-09-14"
+                            name="date_select"
+>14</a></li>
+<li><a href="javascript:void(0);" data="2016-09-15"
+                            name="date_select"
+>15</a></li>
+<li><a href="javascript:void(0);" data="2016-09-16"
+                            name="date_select"
+>16</a></li>
+<li><a href="javascript:void(0);" data="2016-09-17"
+                            name="date_select"
+>17</a></li>
+<li><a href="javascript:void(0);" data="2016-09-18"
+                            name="date_select"
+>18</a></li>
+<li><a href="javascript:void(0);" data="2016-09-19"
+                            name="date_select"
+>19</a></li>
+<li><a href="javascript:void(0);" data="2016-09-20"
+                            name="date_select"
+>20</a></li>
+<li><a href="javascript:void(0);" data="2016-09-21"
+                            name="date_select"
+>21</a></li>
+<li><a href="javascript:void(0);" data="2016-09-22"
+                            name="date_select"
+>22</a></li>
+<li><a href="javascript:void(0);" data="2016-09-23"
+                            name="date_select"
+>23</a></li>
+<li><a href="javascript:void(0);" data="2016-09-24"
+                            name="date_select"
+>24</a></li>
+<li><a href="javascript:void(0);" data="2016-09-25"
+                            name="date_select"
+>25</a></li>
+<li><a href="javascript:void(0);" data="2016-09-26"
+                            name="date_select"
+>26</a></li>
+<li><a href="javascript:void(0);" data="2016-09-27"
+                            name="date_select"
+>27</a></li>
+<li><a href="javascript:void(0);" data="2016-09-28"
+                            name="date_select"
+>28</a></li>
+<li><a href="javascript:void(0);" data="2016-09-29"
+                            name="date_select"
+>29</a></li>
+<li><a href="javascript:void(0);" data="2016-09-30"
+                            name="date_select"
+>30</a></li>
+<li><a href="javascript:void(0);" data="2016-10-01"
+                            name="date_select"
+>1</a></li>
+<li><a href="javascript:void(0);" data="2016-10-02"
+                            name="date_select"
+>2</a></li>
+
+
+
+<a href="javascript:void(0);" data="2016-09-01" name="date_select">1</a>
+<a href="javascript:void(0);" data="2016-09-02" name="date_select">2        </a>
+
+
+
+<a href="javascript:void(0);" data="2016-07-05" name="disable">5</a>
+
+<a href="javascript:void(0);" data="2016-06-02" class="disabled">2        </a>
+
+<a href="javascript:void(0);" data="2016-07-01" class="disable">1</a>
+
+
+
+
+<a href="javascript:void(0);" data="2016-08-02" class="current" name="date_select">2 </a>
+
+
+<a href="javascript:void(0);" data="2016-08-01" class="current" name="date_select">1</a>
+
+
+
+
+
+
+开始时候的数据
+
+
+ <li class="item_class_li  item_coach_1003501 ">
+                        <a href="javascript:alert('停止预约了，请换个时间~')" class="course_link">
+                            <div class="course_thumbs team">
+                                <img src="http://wx.qlogo.cn/mmopen/2sN4zkg5bEB4qDWibJVgFqkJicibVZicPM4F3jH7ZzUHZdr3mayvCbRDOAK4Uibf8cJetQTMuicO6wDmH8p5MJpT6Y0QCQvRmwczgS/0" alt="120*120">
+                            </div>
+                            <div class="course_detail">
+                                <p class="name">课程一</p>
+                                <p class="date"><b class="t-text-color">02:00 - 06:00</b>
+                                    小石头 </p>
+                            </div>
+                            <div class="book_status">
+                                <i class="course_status stop"></i>
+                            </div>
+                        </a>
+                    </li>
+
+
+<li class="item_class_li  item_coach_1003501 ">
+                        <a href="javascript:alert('停止预约了，请换个时间~')" class="course_link">
+                            <div class="course_thumbs team">
+                                <img src="http://wx.qlogo.cn/mmopen/2sN4zkg5bEB4qDWibJVgFqkJicibVZicPM4F3jH7ZzUHZdr3mayvCbRDOAK4Uibf8cJetQTMuicO6wDmH8p5MJpT6Y0QCQvRmwczgS/0" alt="120*120">
+                            </div>
+                            <div class="course_detail">
+                                <p class="name">课程一</p>
+                                <p class="date"><b class="t-text-color">02:00 - 06:00</b>
+                                    小石头 </p>
+                            </div>
+                            <div class="book_status">
+                                <i class="course_status stop"></i>
+                            </div>
+                        </a>
+                    </li>
+
+
+1.提供消息模版
+2.各种货币的解释
+3.体测服务作为商品，怎么兑换
+4.alphaf指数里面的视频
+
+
+
+
+
+
+User user = JSONObject.parseObject(resultStr, User.class);
+
+
+{"item":[{"media_id":"PA5Qq-VWP2BgDXck21qQJYoK3xXe2grCX-ojeA1irbs","content":{"news_item":[{"title":"练好这块肌肉，让你的身材变得挺拔好看","author":"","digest":"练好这块肌肉","content":"<p style=\"margin-bottom:5px\"><span style=\"font-size:15px;font-family:宋体\"> &nbsp; &nbsp; &nbsp; &nbsp;看起来挺拔，其实就是挺胸，抬头，展肩，给人一个漂亮的体态，从字面上讲很好理解，但对于常年不良体态的人，很难明白挺胸，展肩的方法和意义，主要还是肌肉能力太差太差太差了，差到大脑早就不会控制自己的身体了，就算明白什么意思，也无法做到。这肯定是需要通过训练，才能找回来的。健身圈里有一说，叫新手练胸，老手练背，高手练腿。这不是一个好的现象，但很说明现实，大家不愿意训练腿部和背部，又苦又累，而等他们发现大胸才是华而不实时，大多会出现肩关节不适疼痛，体态变形明显等问题。其实正确的训练思路，步骤应该是反过来的，腿，背，胸及其它部位。<\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\">这有一定训练难度，需要正确的指导，很辛苦，但对于整体的体态调整，肌肉功能发展，都是非常有好处的。<\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\">&nbsp;<img data-s=\"300,640\" data-type=\"png\" data-src=\"http:\/\/mmbiz.qpic.cn\/mmbiz\/ssGy49XUGAk8Jt0FWV3GtHUjTg8Wlgp9VqLcPh8h8RNJCuQmeTCtIcRAIfmWzrdibPQe49hBVqQUfiaYKvNlvLRw\/0?wx_fmt=png\" data-ratio=\"0.9298561151079137\" data-w=\"\" style=\"font-family: 宋体; font-size: 15px; line-height: 24px; white-space: pre-wrap; width: 556px;\"  \/><\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\"><\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-family: 宋体; font-size: 15px; line-height: 1.6;\">背部主要肌肉都需要训练，背阔肌，斜方肌，竖脊肌，三角肌，等都是帮助伸展躯干，挺拔身姿的，还有拉伸胸肌，肩关节，达到展开双肩，通过训练学会肩胛骨略收，背肌收紧。<\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\">&nbsp;&nbsp;&nbsp;&nbsp;<img data-s=\"300,640\" data-type=\"png\" data-src=\"http:\/\/mmbiz.qpic.cn\/mmbiz\/ssGy49XUGAk8Jt0FWV3GtHUjTg8Wlgp9wib6TpBg3aahyaXk9BDp56icbbLp5fBmeU5DP2sKViatROralGMOqmcibQ\/0?wx_fmt=png\" data-ratio=\"0.6654676258992805\" data-w=\"\" style=\"font-family: 宋体; font-size: 15px; line-height: 24px; text-indent: 32px; white-space: pre-wrap; width: 556px;\"  \/><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><img data-s=\"300,640\" data-type=\"png\" data-src=\"http:\/\/mmbiz.qpic.cn\/mmbiz\/ssGy49XUGAk8Jt0FWV3GtHUjTg8Wlgp9cBNpg6moky2U9RIjbxjyQ0TqNvK8ibVJVUXBpeja4L3jIsvsKXGkx4g\/0?wx_fmt=png\" style=\"line-height: 25.6px; text-indent: 32px; white-space: pre-wrap;\" data-ratio=\"0.6654676258992805\" data-w=\"\"  \/><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-family: 宋体; font-size: 15px; line-height: 1.6;\">使用健美选手的图片，可以很清楚的看出，哪些肌肉可以有效的帮助你体态挺拔。只要你是直立生活的人类，双腿就是让你站立，挺拔的最重要部位，也是一切训练的灵魂。想一想一个人都难以站直，站正，双腿无力，跑跳障碍，还谈什么美感。普通人不可能训练的那么夸张，但也必须靠训练才能得到。<\/span><span style=\"font-size:15px;font-family:宋体\"><br  \/><\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\"><img data-s=\"300,640\" data-type=\"png\" data-src=\"http:\/\/mmbiz.qpic.cn\/mmbiz\/ssGy49XUGAk8Jt0FWV3GtHUjTg8Wlgp9HI8nmgLCsA8ibtlfmibsiaciagbcurMzlDh2yZyk1dQZlOXw3tkEdWnmjQ\/0?wx_fmt=png\" style=\"width: 100%; height: auto;\" data-ratio=\"0.670863309352518\" data-w=\"\"  \/><br  \/><\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\">腿部肌肉力量训练肯定是负重深蹲最爽，使用杠铃，哑铃都可以，必须可以先徒手做标准后，在慢慢尝试负重。如果你能负重自重蹲起，身体就稳定的多了，这可是腿部力量要求的最低标准哦！大腿平行地面就行，不需要像举重运动员一样蹲那么深。<img data-s=\"300,640\" data-type=\"png\" data-src=\"http:\/\/mmbiz.qpic.cn\/mmbiz\/ssGy49XUGAk8Jt0FWV3GtHUjTg8Wlgp9TyyrllECVrySkic5tSsnG5aR5IPzYmr3MKWCiaBwwWKj5ibSzpc9VQgUQ\/0?wx_fmt=png\" data-ratio=\"0.737410071942446\" data-w=\"\"  \/><br  \/><\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\">负重深蹲对一些人来说太难了，感觉很危险，那就试试腿举，有上斜腿举，和水平腿举都可以。器械腿举一样可以很好的训练腿部肌肉力量，相对安全的多，技术难度也要小的多，对腰部压力很小。注意腿的角度，全脚掌踩实，膝关节下到90度，后背靠近凳子，吸气下，呼气蹬起。重量要大一些，最好完成8～10次。<\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\"><br  \/><\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-family: 宋体; font-size: 15px; line-height: 1.6;\">背阔肌的训练当然是引体向上，如果你能不借力标准完成十个，就算及格了，必须是背肌发力完成的。遗憾的是大部分不能正确的完成引体向上，脚一悬空就不会发力了，还是要借助器械高位下拉辅助完成背阔肌的训练，相对更好掌握一些，可以作为引体向上的过度。<\/span><span style=\"font-size:15px;font-family:宋体\"><\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\"><\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\">&nbsp;<\/span><span style=\"font-size:15px;font-family:宋体\">器械水平坐姿划船，很好的训练中下斜方肌，用力挺胸，收紧肩胛骨，舒展开双肩，对于上身的挺拔体态非常有好处。<\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\"><\/span><span style=\"font-size:15px;font-family:宋体\">&nbsp;<\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\">硬拉来了，硬拉是下背部，竖脊肌很好的训练，正确的硬拉可以帮助你强化腰力，稳定脊柱，挺拔身姿。硬拉是一个复合性很强的动作，需要熟练的髋关节运动，较好的柔韧性，学会锁住腰椎，腹肌对抗，膝关节自然放松，屈髋，锁腰，收腹，吸气俯身，呼气拉起，展肩，停两秒。硬拉同样需要达到可以轻松拉起自重的力量标准为基础。如果你不能标准完成硬拉，就先从罗马凳训练开始，掌握对身体的控制后在尝试负重训练，最后再学习硬拉。<\/span><\/p><p style=\"margin-bottom:5px;text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\"><\/span><span style=\"font-size:15px;font-family:宋体\"><br  \/>&nbsp;<\/span><\/p><p style=\"text-indent:32px\"><span style=\"font-size:15px;font-family:宋体\">侧平举和哑铃推举。三角肌的训练可以先从侧平举开始，是为了学会三角肌的使用，掌握单关节的运动方式，不要借力，对着镜子，保证自己头正肩平，可以先静态保持30～60秒，感觉三角肌的发力，酸爽。肘关节放松，必须抬起头，抬起下巴看着天花板，腕，肘，肩，在平行线上，手腕一定不要高过肘关节，哑铃重量要轻。如果感觉双臂太难，可以一侧一侧的单手做，但必须保持身体的标准站姿。坐姿推举，训练三角肌的力量围度，哑铃可以重一点，帮助打造结实的三角肌，使你挺拔而宽大，和背阔肌共同形成完美的倒三角。<\/span><\/p><p><br  \/><\/p>","content_source_url":"","thumb_media_id":"PA5Qq-VWP2BgDXck21qQJZl8oPlcbWgtJVTAn_5l6uE","show_cover_pic":1,"url":"http:\/\/mp.weixin.qq.com\/s?__biz=MzI3NDIwMDU0NQ==&mid=100000009&idx=1&sn=badeb0de24b316c98e8b309824bff84e#rd","thumb_url":"http:\/\/mmbiz.qpic.cn\/mmbiz\/ssGy49XUGAk8Jt0FWV3GtHUjTg8Wlgp9HI8nmgLCsA8ibtlfmibsiaciagbcurMzlDh2yZyk1dQZlOXw3tkEdWnmjQ\/0?wx_fmt=png"}],"create_time":1470920205,"update_time":1470920567},"update_time":1470920567}],"total_count":1,"item_count":1}
+
+
+
+我要提问 bug
+跟换管家 消息推送
+预约通知去掉调链接
+
+
+
+更换管家
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+蓝色值  #58e6f7
+
+
+
+
+1.     Concept 2
+2.     Spinning 
+3.     Crosscore 
+4.     营养健康
+5.     综合训练
+6.     健身计划
+7.     比赛捐赠
+8.     线上服务
+
+
+
+上海领佳健身有限公司
+
+88 230 247
+
+
+
+<li class="course_list_item">
+                        <a class="course_link" href="javascript:disappoint(10)">
+                            <div class="course_thumbs team">
+                                <img src="null" alt="120*120">
+                            </div>
+                            <div class="course_detail">
+                                <p class="name">比赛二</p>
+
+                                <p class="date"><b class="t-text-color">09:39 - 15:39</b>
+                            </p></div>
+
+                            <div class="book_status single">
+                                <i class="course_status  qx"></i>
+                            </div>
+                        </a>       </li>
+
+<li class="item_class_li  item_coach_1003501 ">
+                        <a href="javascript:disappoint(6)" class="course_link">
+                            <div class="course_thumbs team">
+                                <img src="null" alt="120*120">
+                            </div>
+                            <div class="course_detail">
+                                <p class="name">比赛一</p>
+                                <p class="date"><b class="t-text-color">09:00 - 22:39</b></p>
+                            </div>
+                            <div class="book_status">
+                                <i class="course_status qx"></i>
+                            </div>
+                        </a>
+                    </li>
+
+
+
+ textStyle: {
+                color: '#fff',
+                fontSize: 14
+            },
+                        
+
+
+evayujiali   37
+ray教练		 51
+adem教练   52
+steven教练  53
+morgan教练  56
+
+
+o4VUowxsdVAvzG7gUHShcEuB6k5w
+
+
+
+
+5C312C0A256F6DC005B5A67B2DB06904
+
+
+
+appid=wxb4a6cd7224ef8a51&noncestr=3f73354cd9f5474892ac301eb7b6cdd0&package=Sign=WXPay&partnerid=1388076702&prepayid=wx2016091908540125ed8347ef0219616689&timestamp=1474246441&key=205F8B30CF344AAF8971B2611D855135
+                        
+
+
+ size = 1
+
+
+ content
+
+
+
+ appid=wxb4a6cd7224ef8a51
+ noncestr=3f73354cd9f5474892ac301eb7b6cdd0
+ package=Sign=WXPay
+ partnerid=1388076702
+ prepayid=wx20160919101937feb78214b30687036366&
+ timestamp=1474251577
+ key=205F8B30CF344AAF8971B2611D855135
+
+
+
+appid=wxb4a6cd7224ef8a51
+body=测试
+mch_id=1388076702
+nonce_str=ea4b47f29f0030a6162b40662ff91c70
+notify_url=htttp://192.168.1.5:8081/test.json
+out_trade_no=1474251646389
+spbill_create_ip=192.168.1.5
+total_fee=1
+trade_type=APP
+key=205F8B30CF344AAF8971B2611D855135
+
+
+hengling@123
+
+
+
+
+
+121.40.97.9
+
+http://hlingsoft.oss-cn-hangzhou.aliyuncs.com/getheadimg.jpeg
+http://hlingsoft.oss-cn-hangzhou.aliyuncs.com/gym/Rowing_man%20woman%20logo.jpg
+
+
+
+数据库更新
+1.member
+2.company
+
+
+/wechat/pay/shoppingCentre.do
+
+
+{"System":"HUAWEI TIT-CL10","DeviceId":"a4:ba:76:71:ff:3d","Version":"2.1","SubmitTime":"2016-12-16 05:25:54","Token":"Ys55Pc+HKNljTnx163\/WkxsW0vX8q1bVbeBBoAm0SS8ipiVGsgityGPI+CB0dJwccWnP8VnvQwo=","TemplateId":"16112700000325","CardId":"434714","SelectTime":"2016-12-26 14:00"}
+
+
+指数测试
